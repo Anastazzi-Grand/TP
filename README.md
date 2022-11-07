@@ -37,19 +37,24 @@
 
 ## Диаграмма BPMN (рисунки 1-4)
  ![image](https://user-images.githubusercontent.com/68990296/193074428-b91e0a04-ffd2-4a56-a17f-b04a93723b3b.png)
+ 
  Рисунок 1 - Полная диаграмма бизнес процесса
 
  ![image](https://user-images.githubusercontent.com/68990296/193074467-57c0f7f9-e358-4973-bcd3-f86cb8ea440d.png)
+ 
  Рисунок 2 - Формирование чек-листа для доставок
 
  ![image](https://user-images.githubusercontent.com/68990296/193074520-1066dccc-135c-411c-851f-83e0004ca7ac.png)
+ 
  Рисунок 3 - Доставка блюд ограничивается по времени
 
  ![image](https://user-images.githubusercontent.com/68990296/193074574-eee1f3bc-4a60-41cb-aa6b-64b418912a52.png)
  Рисунок 4 - Передача заказа клиенту
+ 
 
 ### 1.3 Создание ER-диаграммы (рисунок 5)
-![диаграмма_2](https://user-images.githubusercontent.com/68990296/200370793-9d4b3644-9a07-4e48-860f-8a656b37312a.png)
+![image](https://user-images.githubusercontent.com/68990296/200371669-9f75ac0f-9582-42d1-8524-d3b7db8e110b.png)
+
 Рисунок 5 - ER-диаграмма "Доставка пиццы"
 
  
