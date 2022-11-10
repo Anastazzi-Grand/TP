@@ -14,7 +14,7 @@ namespace Practica_3sem
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                var orders = db.Orders.ToArray();
+                var orders = db.Order.ToArray();
                 Console.WriteLine("Список объектов");
                 foreach (Order u in orders)
                 {

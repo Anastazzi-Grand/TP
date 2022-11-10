@@ -10,7 +10,7 @@ namespace Practica_3sem
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Order> Order { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder();
