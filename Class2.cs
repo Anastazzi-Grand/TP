@@ -11,6 +11,7 @@ namespace Practica_3sem
     public class ApplicationContext : DbContext
     {
         public DbSet<Order> Order { get; set; }
+        public DbSet<LineNumber> LineNumber { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder();

@@ -10,9 +10,9 @@ namespace Practica_3sem
     {
         public byte Employee_ID { get; set; }
 
-        public string Surname { get; set; }
+        public string? Surname { get; set; }
 
-        public byte Position_ID { get; set; }
+        public byte? Position_ID { get; set; }
 
     }
 }

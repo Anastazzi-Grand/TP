@@ -10,7 +10,7 @@ namespace Practica_3sem
     {
         public byte Post_ID { get; set; }
 
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
     }
 }

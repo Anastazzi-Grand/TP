@@ -10,9 +10,9 @@ namespace Practica_3sem
     {
         public byte Order_number { get; set; }
 
-        public byte Courier_(Employee_ID) { get; set; }
+        public byte? CourierEmployeeID { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
     }
 }
