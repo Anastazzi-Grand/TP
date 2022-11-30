@@ -1,0 +1,30 @@
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.csproj.AssemblyReference.cache
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.AssemblyInfoInputs.cache
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.AssemblyInfo.cs
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.csproj.CoreCompileInputs.cache
+D:\Новая папка\Lab2\Lab2\bin\Debug\net6.0\Lab2.exe
+D:\Новая папка\Lab2\Lab2\bin\Debug\net6.0\Lab2.deps.json
+D:\Новая папка\Lab2\Lab2\bin\Debug\net6.0\Lab2.runtimeconfig.json
+D:\Новая папка\Lab2\Lab2\bin\Debug\net6.0\Lab2.dll
+D:\Новая папка\Lab2\Lab2\bin\Debug\net6.0\Lab2.pdb
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.dll
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\refint\Lab2.dll
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.pdb
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\Lab2.genruntimeconfig.cache
+D:\Новая папка\Lab2\Lab2\obj\Debug\net6.0\ref\Lab2.dll
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\bin\Debug\net6.0\Lab2.exe
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\bin\Debug\net6.0\Lab2.deps.json
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\bin\Debug\net6.0\Lab2.runtimeconfig.json
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\bin\Debug\net6.0\Lab2.dll
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\bin\Debug\net6.0\Lab2.pdb
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.csproj.AssemblyReference.cache
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.AssemblyInfoInputs.cache
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.AssemblyInfo.cs
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.dll
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\refint\Lab2.dll
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.pdb
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\Lab2.genruntimeconfig.cache
+C:\Users\Anastazzi\Downloads\Teoriaprog-main\Lab2\Lab2\obj\Debug\net6.0\ref\Lab2.dll
