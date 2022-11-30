@@ -137,3 +137,52 @@ class Program
         ordersHandler.OutputJsonContents();
     }
 }
+
+/*
+ * [
+  {
+    "Order_line_number": 2,
+    "Order_number": 5,
+    "Count": 1,
+    "pizza": {
+      "Id": 10,
+      "Title": "one",
+      "Price": 100,
+      "Unit_of_measurement": "nice"
+    }
+  },
+  {
+    "Order_line_number": 3,
+    "Order_number": 4,
+    "Count": 2,
+    "pizza": {
+      "Id": 20,
+      "Title": "two",
+      "Price": 200,
+      "Unit_of_measurement": "good"
+    }
+  },
+  {
+    "Order_line_number": 4,
+    "Order_number": 3,
+    "Count": 3,
+    "pizza": {
+      "Id": 30,
+      "Title": "three",
+      "Price": 300,
+      "Unit_of_measurement": "perfect"
+    }
+  },
+  {
+    "Order_line_number": 5,
+    "Order_number": 2,
+    "Count": 4,
+    "pizza": {
+      "Id": 40,
+      "Title": "four",
+      "Price": 400,
+      "Unit_of_measurement": "bad"
+    }
+  }
+]
+*/

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anastazzi\\Downloads\\Teoriaprog-main\\Lab2\\Lab2\\Lab2.csproj",
+      "projectUniqueName": "C:\\Users\\Anastazzi\\Documents\\3 семестр\\TP\\Lab_2\\Lab2\\Lab2.csproj",
       "projectName": "Lab2",
-      "projectPath": "C:\\Users\\Anastazzi\\Downloads\\Teoriaprog-main\\Lab2\\Lab2\\Lab2.csproj",
+      "projectPath": "C:\\Users\\Anastazzi\\Documents\\3 семестр\\TP\\Lab_2\\Lab2\\Lab2.csproj",
       "packagesPath": "C:\\Users\\Anastazzi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anastazzi\\Downloads\\Teoriaprog-main\\Lab2\\Lab2\\obj\\",
+      "outputPath": "C:\\Users\\Anastazzi\\Documents\\3 семестр\\TP\\Lab_2\\Lab2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anastazzi\\AppData\\Roaming\\NuGet\\NuGet.Config",
