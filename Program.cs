@@ -13,6 +13,7 @@ namespace Practica_3sem
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("первая работа с таблицей Order");
             using (ApplicationContext db = new ApplicationContext())
             {
@@ -80,7 +81,7 @@ namespace Practica_3sem
             {
                 var lineNumbers = db.LineNumber.ToArray();
                 var order = db.Order.Where(c => c.Id == 12).FirstOrDefault();
-                LineNumber line = new LineNumber { Order_line_number = 8, Count = 5, ProductId = 12, Order = order};
+                LineNumber line = new LineNumber { Order_line_number = 15, Count = 5, ProductId = 12, Order = order};
 
 
                 db.LineNumber.Add(line);
@@ -91,7 +92,7 @@ namespace Practica_3sem
             Console.WriteLine("Вторая работа с таблицей LineNumber. Добавление");
             using (ApplicationContext db = new ApplicationContext())
             {
-                LineNumber test2 = new LineNumber { Order_line_number = 7, Count = 5, ProductId = 12 };
+                LineNumber test2 = new LineNumber { Order_line_number = 14, Count = 5, ProductId = 12 };
                 db.LineNumber.Add(test2);
                 db.SaveChanges();
                 var users = db.LineNumber.ToArray();
@@ -106,7 +107,7 @@ namespace Practica_3sem
             Console.WriteLine("Вторая работа с таблицей LineNumber. Изменение");
             using (ApplicationContext db = new ApplicationContext())
             {
-                LineNumber? updline = (from LineNumber in db.LineNumber where LineNumber.Order_line_number == 7 select LineNumber).First();
+                LineNumber? updline = (from LineNumber in db.LineNumber where LineNumber.Order_line_number == 14 select LineNumber).First();
                 if (updline != null)
                 {
                     updline.Count = (byte)(updline.Order_line_number / 2);
@@ -124,7 +125,7 @@ namespace Practica_3sem
             Console.WriteLine("Вторая работа с таблицей LineNumber. Удаление");
             using (ApplicationContext db = new ApplicationContext())
             {
-                LineNumber? deluser = (from lineNumber in db.LineNumber where lineNumber.Order_line_number == 7 select lineNumber).First();
+                LineNumber? deluser = (from lineNumber in db.LineNumber where lineNumber.Order_line_number == 14 select lineNumber).First();
                 if (deluser != null)
                 {
                     db.LineNumber.Remove(deluser);
@@ -137,9 +138,175 @@ namespace Practica_3sem
                     Console.WriteLine(u.Order_line_number + " - " + u.Count + " - " + u.ProductId);
                 }
 
+            } */
+
+
+            /**************Простая проекция*/
+            Console.WriteLine("Простая проекция");
+            using (ApplicationContext db = new ApplicationContext())
+                {
+                    /*  var orders = from p in db.Order.ToArray()
+                                    select p.Id; */
+                    var orders = db.Order.ToArray().Select(p => p.Id);
+                    foreach (var p in orders)
+                    {
+                        Console.WriteLine(p);
+                    }
+
+
+                }
+
+
+            /**************Анонимный объект*/
+            Console.WriteLine("Анонимный объект");
+            using (ApplicationContext db = new ApplicationContext())
+                {
+                /*var orders = from p in db.Order.ToArray()
+                            select new
+                            {
+                                Status = p.Status + "(New obj)",
+                                Id = p.Id * 2
+                            }; */
+                var orders = db.Order.ToArray().Select(p => new
+                    {
+                        Status = p.Status + "(New obj)",
+                        Id = p.Id * 2
+                    });
+                    foreach (var p in orders)
+                    {
+                        Console.WriteLine(p.Status + " " + p.Id);
+                    }
+
+                }
+
+
+            Console.WriteLine("Переменные в операторах Linq");/************Переменные в операторах Linq*/
+
+            using (ApplicationContext db = new ApplicationContext())
+                        {
+                            var orders = from p in db.Order.ToArray()
+                                        let id = p.Id * 2
+                                        select new
+                                        {
+                                            Status = p.Status + "(New obj)",
+                                            Id = id
+                                        };
+
+                            foreach (var p in orders)
+                            {
+                                Console.WriteLine(p.Status + " " + p.Id);
+                            }
+
+                        }
+
+            /************Декартово произведение*/
+            Console.WriteLine("Декартово произведение");
+            using (ApplicationContext db = new ApplicationContext())
+                        {
+                            var orders = from u in db.Order.ToArray()
+                                        from c in db.LineNumber.ToArray()
+                                        select new
+                                        {
+                                            Status = u.Status,
+                                            Number = c.Count
+                                        };
+                // var orders = db.Order.ToArray(). (db.LineNumber.ToArray(), (u, c) => new { Status = u.Status, Number = c.Count });
+                foreach (var p in orders)
+                            {
+                                Console.WriteLine(p.Status + " " + p.Number);
+                            }
+
+                        }
+
+
+                Console.WriteLine("Фильтрация коллекции");
+            using (ApplicationContext db = new ApplicationContext())
+                        {
+                /* var orders = from p in db.Order.ToArray()
+                             where p.Id <= 6
+                             select p.Status;*/
+                var orders = db.Order.ToArray().Where(p => p.Id <= 6).Select(p => p.Status);
+                            foreach (var p in orders)
+                            {
+                                Console.WriteLine(p);
+                            }
+
+
+                        }
+
+
+            Console.WriteLine("Сортировка коллекции");
+            using (ApplicationContext db = new ApplicationContext())
+                        {
+
+                /*  var orders = from u in db.Order.ToArray()
+                               orderby u.Status
+                               select u;  */
+
+
+                var orders = db.Order.ToArray().OrderBy(u => u.Status);
+                            foreach (var p in orders)
+                            {
+                                Console.WriteLine(p.Status);
+                            }
+
+                        }
+
+            Console.WriteLine("Объединение таблиц");
+            using (ApplicationContext db = new ApplicationContext())
+                        {
+
+                            /*    var users = from u in db.Users.ToArray() join
+                                                c in db.Companies.ToArray() on u.CompanyID equals c.Id
+                                                select new { user = u.Fio, company = c.Name };
+
+                                */
+                            var orders = db.Order.ToArray().Join(db.LineNumber.ToArray(), u => u.Client_ID, c => c.ProductId, (u, c) => new { order = u.Status, number = c.Count });
+                            foreach (var p in orders)
+                            {
+                                Console.WriteLine(p.order + " " + p.number);
+                            }
+
+                        }
+
+                Console.WriteLine("Загрузка связанных данных");
+            using (ApplicationContext db = new ApplicationContext())
+                        {
+
+
+                            var orders = db.Order.Include(u => u.LineNumbers).ToArray();
+
+
+
+                            foreach (var p in orders)
+                            {
+                                Console.WriteLine(p.Status + " " + p.LineNumbers?.Count);
+                            }
+
+                        }
+
+            Console.WriteLine("Извлечение определенного числа элементов");
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var orders = db.Order.ToArray().Take(2);
+                foreach (var p in orders)
+                {
+                    Console.WriteLine(p.Status);
+                }
             }
 
-           
+            Console.WriteLine("Последовательное объединение таблиц");
+            using (ApplicationContext db = new ApplicationContext())
+            {
+
+                var orders = db.Order.ToArray().Zip(db.LineNumber.ToArray());
+                foreach (var p in orders)
+                {
+                    Console.WriteLine($"{p.First.Id} - {p.Second.Order_line_number}");
+                }
+
+            }
+
         }
     }
 }
