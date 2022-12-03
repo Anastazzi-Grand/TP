@@ -203,14 +203,14 @@ namespace Practica_3sem
             Console.WriteLine("Декартово произведение");
             using (ApplicationContext db = new ApplicationContext())
                         {
-                            var orders = from u in db.Order.ToArray()
+                           var orders = from u in db.Order.ToArray()
                                         from c in db.LineNumber.ToArray()
                                         select new
                                         {
                                             Status = u.Status,
                                             Number = c.Count
                                         };
-                // var orders = db.Order.ToArray(). (db.LineNumber.ToArray(), (u, c) => new { Status = u.Status, Number = c.Count });
+                 //var orders = db.Order.ToArray(). (db.LineNumber.ToArray(), (u, c) => new { Status = u.Status, Number = c.Count });
                 foreach (var p in orders)
                             {
                                 Console.WriteLine(p.Status + " " + p.Number);
@@ -256,12 +256,12 @@ namespace Practica_3sem
             using (ApplicationContext db = new ApplicationContext())
                         {
 
-                            /*    var users = from u in db.Users.ToArray() join
-                                                c in db.Companies.ToArray() on u.CompanyID equals c.Id
-                                                select new { user = u.Fio, company = c.Name };
+                /*    var orders = from u in db.Order.ToArray() join
+                                    c in db.LineNumber.ToArray() on u.ProductId equals c.Id
+                                    select new { user = u.Fio, company = c.Name };
 
-                                */
-                            var orders = db.Order.ToArray().Join(db.LineNumber.ToArray(), u => u.Client_ID, c => c.ProductId, (u, c) => new { order = u.Status, number = c.Count });
+                    */
+                var orders = db.Order.ToArray().Join(db.LineNumber.ToArray(), u => u.Id, c => c.Order_line_number, (u, c) => new { order = u.Status, number = c.Count });
                             foreach (var p in orders)
                             {
                                 Console.WriteLine(p.order + " " + p.number);
@@ -306,6 +306,19 @@ namespace Practica_3sem
                 }
 
             }
+            
+            Console.WriteLine("SelectMany");
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var order = db.Order.SelectMany(c => db.LineNumber, (c, emp) => new { Stat = c.Status, ID = c.Id, Count = emp.Count });
+                Console.WriteLine(order.Count());
+                foreach (var p in order)
+                {
+                    Console.WriteLine($"{p.ID} {p.Stat} {p.Count}");
+
+                }
+            }
+            
 
         }
     }
