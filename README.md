@@ -18,7 +18,7 @@
 - Повар
 - Курьер
 
-![image](https://user-images.githubusercontent.com/68990296/201193054-624edb76-b9d8-44a1-a3e0-c996ef388a0a.png)
+![use-case](https://user-images.githubusercontent.com/68990296/206570395-0d77775a-505c-420f-963e-8af5bcba2412.png)
 
 Рисунок 1 - Use Case модель "Доставка пиццы"
  
